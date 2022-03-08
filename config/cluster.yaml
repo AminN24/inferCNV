@@ -1,0 +1,21 @@
+__default__:
+  time: '1:00:00'
+  mem: '32gb'
+  tasks: 1
+  cores: 4
+  logout: 'logs/slurm_{rule}_{wildcards.sample}.log.out'
+  logerror: 'logs/slurm_{rule}_{wildcards.sample}.log.err'
+  acc: kaliappa_550
+
+trimAdapters:
+  cores: 4
+  mem: '16gb'
+
+starIndex:
+  cores: 16 
+  mem: '64gb'
+
+starAlign:
+  cores: 16
+  mem: '64gb'
+

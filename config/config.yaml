@@ -1,0 +1,64 @@
+# Sample information
+dnaReadsDir: /project/kaliappa_550/amin/p1_inferCNV/data/fastq/dna
+rnaReadsDir: /project/kaliappa_550/amin/p1_inferCNV/data/fastq/rna
+
+dnaSamples:
+  S142_MCF7: ERR1898660
+  S143_MCF7: ERR1898661
+  S145_MCF7: ERR1898662
+  S146_MCF7: ERR1898663
+  S147_MCF7: ERR1898664
+  S148_MCF7: ERR1898665
+  S149_MCF7: ERR1898666
+  S150_MCF7: ERR1898667
+  S161_MCF7: ERR1898668
+  S162_MCF7: ERR1898669
+  S163_MCF7: ERR1898670
+  S164_MCF7: ERR1898671
+  S165_MCF7: ERR1898672
+  S166_MCF7: ERR1898673
+
+rnaSamples:
+  S142_MCF7: ERR1898566
+  S143_MCF7: ERR1898567
+  S145_MCF7: ERR1898568
+  S146_MCF7: ERR1898569
+  S147_MCF7: ERR1898570
+  S148_MCF7: ERR1898571
+  S149_MCF7: ERR1898572
+  S150_MCF7: ERR1898573
+  S161_MCF7: ERR1898582
+  S162_MCF7: ERR1898583
+  S163_MCF7: ERR1898584
+  S164_MCF7: ERR1898585
+  S165_MCF7: ERR1898586
+  S166_MCF7: ERR1898587
+
+read1Suffix: _1.fastq.gz
+read2Suffix: _2.fastq.gz
+
+# trim_galore parameters -> trimAdapters
+minPhred: 20
+minOverlap: 3
+
+# hisat2 parameters -> alignReads
+refIndex: 'data/ref/GRCh38/index/hisat2/genome_tran'
+#refIndex: '/scratch2/naghdloo/ref_source/GRCh38/hisat2Index/grch38_snp_tran/genome_snp_tran'
+nThreads: 16
+
+# picard bam fix parameters -> fixBAM
+RGID: 4
+RGLB: lib1
+RGPL: illumina
+RGPU: unit1
+RGSM: 20
+tempDir: '/scratch2/naghdloo/temporary'
+
+# picard postQC parameters -> rnaQC
+refFlat: 'data/ref/GRCh38/gtf/refFlat.txt'
+rrna: 'data/ref/GRCh38/gtf/rRNA.intervalList'
+
+# htseq-count parameters -> countGenes
+minMapq: 10
+stranded: 'no'
+annotation: 'data/ref/GRCh38/gtf/Homo_sapiens.GRCh38.84.gtf'
